@@ -30,7 +30,8 @@ resource "azurerm_container_group" "tfc-agent" {
 
 environment_variables = {
       TFC_AGENT_SINGLE = "True",
-      TFC_AGENT_NAME = "SM_Test_Agent_1"
+      TFC_AGENT_NAME = "SM_Test_Agent_1",
+      TFC_AGENT_LOG_LEVEL = "trace"
     }    
 
 secure_environment_variables = {
