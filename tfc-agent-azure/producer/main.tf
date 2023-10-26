@@ -2,7 +2,8 @@ provider "azurerm" {
     version = "<=3.25.0"
     subscription_id = var.subscriptionID
     tenant_id = var.tenantID
-  features {}
+
+    features {}
 }
 
 data "azurerm_resource_group" "rg" {
