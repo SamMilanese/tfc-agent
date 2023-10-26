@@ -20,3 +20,8 @@ variable "username" {
   description = "The admin username for the instance."
   default     = "admin"
 }
+
+variable "tenantID" {
+    type = string
+    description = "location of your resource group"
+}
