@@ -28,18 +28,12 @@ resource "azurerm_container_group" "tfc-agent" {
       protocol = "TCP"
     }
 
-    environment_variables = [
-              {
-                name  = "TFC_AGENT_SINGLE",
-                value = "True"
-              },
-              {
-                name  = "TFC_AGENT_NAME",
-                value = "SM_Test_Agent_1"
-              }
-            ]
+environment_variables = {
+      TFC_AGENT_SINGLE = "True",
+      TFC_AGENT_NAME = "SM_Test_Agent_1"
+    }    
 
-    secure_environment_variables = {
+secure_environment_variables = {
       TFC_AGENT_TOKEN = var.tfc_agent_token
     }
   }
