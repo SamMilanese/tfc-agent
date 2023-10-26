@@ -4,6 +4,7 @@ provider "azurerm" {
   # These may also be provided as environment variables
   # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#argument-reference
   subscription_id = var.subscription_id
+  tenant_id = var.tenantID
   use_msi         = true
 }
 
