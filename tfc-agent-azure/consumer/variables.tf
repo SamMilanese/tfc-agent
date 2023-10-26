@@ -18,7 +18,7 @@ variable "subscription_id" {
 
 variable "username" {
   description = "The admin username for the instance."
-  default     = "admin"
+  default     = "sm_admin"
 }
 
 variable "tenantID" {
