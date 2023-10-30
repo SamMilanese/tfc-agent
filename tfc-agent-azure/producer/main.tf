@@ -31,7 +31,6 @@ resource "azurerm_container_group" "tfc-agent" {
 commands = [
       "/bin/sh",
       "-c",
-      "mkdir -p ~/.tfc-agent/hooks",
     ]
 
 
