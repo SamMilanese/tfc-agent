@@ -32,7 +32,7 @@ resource "azurerm_container_group" "tfc-agent" {
       "/bin/sh",
       "-c",
       "mkdir -p ~/.tfc-agent/hooks",
-      "cat <<EOF > ~/.tfc-agent/hooks/terraform-pre-plan #!/bin/bash printenv EOF"
+      "cat <<EOF > ~/.tfc-agent/hooks/terraform-pre-plan #!/bin/bash printenv EOF",
       "chmod +x ~/.tfc-agent/hooks/terraform-pre-plan",
     ]
 
