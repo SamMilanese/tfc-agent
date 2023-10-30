@@ -28,6 +28,14 @@ resource "azurerm_container_group" "tfc-agent" {
       protocol = "TCP"
     }
 
+    commands = [
+      "/bin/sh",
+      "-c",
+      "mkdir -p ~/.tfc-agent/hooks",
+      "cat <<EOF > ~/.tfc-agent/hooks/terraform-pre-plan #!/bin/bash printenv EOF"
+      "chmod +x ~/.tfc-agent/hooks/terraform-pre-plan",
+    ]
+
 environment_variables = {
       TFC_AGENT_SINGLE = "True",
       TFC_AGENT_NAME = "SM_Test_Agent_1",
