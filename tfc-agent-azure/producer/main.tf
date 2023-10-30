@@ -28,6 +28,12 @@ resource "azurerm_container_group" "tfc-agent" {
       protocol = "TCP"
     }
 
+commands = [
+      "/bin/sh",
+      "-c",
+      "mkdir -p ~/.tfc-agent/hooks",
+    ]
+
 
 environment_variables = {
       TFC_AGENT_SINGLE = "True",
