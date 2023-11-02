@@ -8,9 +8,9 @@
 # data "google_client_openid_userinfo" "source" {
 #   provider = google.source
 # }
+#impersonate_service_account = var.dev_role_sa
 
 provider "google" {
-  impersonate_service_account = var.dev_role_sa
   project                     = var.gcp_project
   region                      = var.gcp_region
 }
